@@ -6043,7 +6043,7 @@
                         a.mapScale - f <= oe && (w = oe - (a.mapScale - f)), we.fillRect(v, a.mapScale - d, oe - v - w, se - (a.mapScale - d))
                     }
                     for (we.globalAlpha = 1, we.fillStyle = "rgba(0, 0, 70, 0.35)", we.fillRect(0, 0, oe, se), we.strokeStyle = nt, s = 0; s < W.length + q.length; ++s)
-                        if ((D = W[s] || q[s - W.length]).visible) {
+                        //if ((D = W[s] || q[s - W.length]).visible && (10 != D.skinIndex || D == O || D.team && D.team == O.team)) {
                             var x = (D.team ? "[" + D.team + "] " : "") + (D.name || "");
                             if ("" != x) {
                                 if (we.font = (D.nameScale || 30) + "px Hammersmith One", we.fillStyle = "#fff", we.textBaseline = "middle", we.textAlign = "center", we.lineWidth = D.nameScale ? 11 : 8, we.lineJoin = "round", we.strokeText(x, D.x - f, D.y - d - D.scale - a.nameY), we.fillText(x, D.x - f, D.y - d - D.scale - a.nameY), D.isLeader && Dn.crown.isLoaded) {
@@ -6053,7 +6053,7 @@
                                 1 == D.iconIndex && Dn.skull.isLoaded && (b = a.crownIconScale, v = D.x - f - b / 2 + we.measureText(x).width / 2 + a.crownPad, we.drawImage(Dn.skull, v, D.y - d - D.scale - a.nameY - b / 2 - 5, b, b))
                             }
                             D.health > 0 && (a.healthBarWidth, we.fillStyle = nt, we.roundRect(D.x - f - a.healthBarWidth - a.healthBarPad, D.y - d + D.scale + a.nameY, 2 * a.healthBarWidth + 2 * a.healthBarPad, 17, 8), we.fill(), we.fillStyle = D == O || D.team && D.team == O.team ? "#8ecc51" : "#cc5151", we.roundRect(D.x - f - a.healthBarWidth, D.y - d + D.scale + a.nameY + a.healthBarPad, 2 * a.healthBarWidth * (D.health / D.maxHealth), 17 - 2 * a.healthBarPad, 7), we.fill())
-                        }
+                        //}
                     for (m.update(A, we, f, d), s = 0; s < W.length; ++s)
                         if ((D = W[s]).visible && D.chatCountdown > 0) {
                             D.chatCountdown -= A, D.chatCountdown <= 0 && (D.chatCountdown = 0), we.font = "32px Hammersmith One";

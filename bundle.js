@@ -3112,7 +3112,6 @@
                 }
             }
         }, this.addWeaponXP = function(e) {
-            console.log(e);
             this.weaponXP[this.weaponIndex] || (this.weaponXP[this.weaponIndex] = 0), this.weaponXP[this.weaponIndex] += e
         }, this.earnXP = function(e) {
             this.age < a.maxAge && (this.XP += e, this.XP >= this.maxXP ? (this.age < a.maxAge ? (this.age++, this.XP = 0, this.maxXP *= 1.2) : this.XP = this.maxXP, this.upgradePoints++, m.send(this.id, "16", this.upgradePoints, this.upgrAge), m.send(this.id, "15", this.XP, l.fixTo(this.maxXP, 1), this.age)) : m.send(this.id, "15", this.XP))
@@ -5967,7 +5966,7 @@
 
     function Ti(e) {
         for (var t = Date.now(), n = 0; n < W.length; ++n) W[n].forcePos = !W[n].visible, W[n].visible = !1;
-        for (n = 0; n < e.length;)(D = Ei(e[n])) && (D.t1 = void 0 === D.t2 ? t : D.t2, D.t2 = t, D.x1 = D.x, D.y1 = D.y, D.x2 = e[n + 1], D.y2 = e[n + 2], D.d1 = void 0 === D.d2 ? e[n + 3] : D.d2, D.d2 = e[n + 3], D.dt = 0, D.buildIndex = e[n + 4], D.weaponIndex = e[n + 5], D.weaponVariant = e[n + 6], D.team = e[n + 7], D.isLeader = e[n + 8], D.skinIndex = e[n + 9], D.tailIndex = e[n + 10], D.iconIndex = e[n + 11], D.zIndex = e[n + 12], D.visible = !0), n += 13
+        for (n = 0; n < e.length;)(D = Ei(e[n])) && (D.t1 = void 0 === D.t2 ? t : D.t2, D.t2 = t, D.x1 = D.x, D.y1 = D.y, D.x2 = e[n + 1], D.y2 = e[n + 2], D.d1 = void 0 === D.d2 ? e[n + 3] : D.d2, D.d2 = e[n + 3], D.dt = 0, D.buildIndex = e[n + 4], D.weaponIndex = e[n + 5], window.weaponIndex = D.weaponIndex, D.weaponVariant = e[n + 6], D.team = e[n + 7], D.isLeader = e[n + 8], D.skinIndex = e[n + 9], D.tailIndex = e[n + 10], D.iconIndex = e[n + 11], D.zIndex = e[n + 12], D.visible = !0), n += 13
     }
 
     function Ei(e) {

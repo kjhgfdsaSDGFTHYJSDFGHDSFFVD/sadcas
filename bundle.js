@@ -6046,13 +6046,13 @@
                         if ((D = W[s] || q[s - W.length]).visible && (10 != D.skinIndex || D == O || D.team && D.team == O.team || 10 == D.skinIndex)) {
                             var x = (D.team ? "[" + D.team + "] " : "") + (D.name || "")/*`\nHP:${D.health}/${D.maxHealth}`*/;
                             if ("" != x) {
-                                if (we.font = (D.nameScale || 30) + "px Hammersmith One", we.fillStyle = "#fff", we.textBaseline = "middle", we.textAlign = "center", we.lineWidth = D.nameScale ? 11 : 8, we.lineJoin = "round", we.strokeText(x, D.x - f, D.y - d - D.scale - a.nameY), we.fillText(x, D.x - f, D.y - d - D.scale - a.nameY), we.strokeText(`\nHP:${D.health}/${D.maxHealth}`, D.x - f, D.y - d - D.scale - a.nameY + (we.measureText(x).height*1.5)), we.fillText(`\nHP:${D.health}/${D.maxHealth}`, D.x - f, D.y - d - D.scale - a.nameY + (we.measureText(x).height*1.5)), D.isLeader && Dn.crown.isLoaded) {
+                                if (we.font = (D.nameScale || 30) + "px Hammersmith One", we.fillStyle = "#fff", we.textBaseline = "middle", we.textAlign = "center", we.lineWidth = D.nameScale ? 11 : 8, we.lineJoin = "round", we.strokeText(x, D.x - f, D.y - d - D.scale - a.nameY), we.fillText(x, D.x - f, D.y - d - D.scale - a.nameY), D.isLeader && Dn.crown.isLoaded) {
                                     var b = a.crownIconScale;
                                     v = D.x - f - b / 2 - we.measureText(x).width / 2 - a.crownPad, we.drawImage(Dn.crown, v, D.y - d - D.scale - a.nameY - b / 2 - 5, b, b)
                                 }
                                 1 == D.iconIndex && Dn.skull.isLoaded && (b = a.crownIconScale, v = D.x - f - b / 2 + we.measureText(x).width / 2 + a.crownPad, we.drawImage(Dn.skull, v, D.y - d - D.scale - a.nameY - b / 2 - 5, b, b))
                             }
-                            D.health > 0 && (a.healthBarWidth, we.fillStyle = nt, we.roundRect(D.x - f - a.healthBarWidth - a.healthBarPad, D.y - d + D.scale + a.nameY, 2 * a.healthBarWidth + 2 * a.healthBarPad, 17, 8), we.fill(), we.fillStyle = D == O || D.team && D.team == O.team ? "#8ecc51" : "#cc5151", we.roundRect(D.x - f - a.healthBarWidth, D.y - d + D.scale + a.nameY + a.healthBarPad, 2 * a.healthBarWidth * (D.health / D.maxHealth), 17 - 2 * a.healthBarPad, 7), we.fill())
+                            D.health > 0 && (a.healthBarWidth, we.fillStyle = nt, we.roundRect(D.x - f - a.healthBarWidth - a.healthBarPad, D.y - d + D.scale + a.nameY, 2 * a.healthBarWidth + 2 * a.healthBarPad, 17, 8), we.fill(), we.fillStyle = D == O || D.team && D.team == O.team ? "#8ecc51" : "#cc5151", we.roundRect(D.x - f - a.healthBarWidth, D.y - d + D.scale + a.nameY + a.healthBarPad, 2 * a.healthBarWidth * (D.health / D.maxHealth), 17 - 2 * a.healthBarPad, 7), we.fill(), we.fillText(`\nHP:${D.health}/${D.maxHealth}`,D.x - f - a.healthBarWidth - a.healthBarPad+(2 * a.healthBarWidth + 2 * a.healthBarPad/2),D.y - d + D.scale + a.nameY+(17/2)))
                         }
                     for (m.update(A, we, f, d), s = 0; s < W.length; ++s)
                         if ((D = W[s]).visible && D.chatCountdown > 0) {

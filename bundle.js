@@ -448,7 +448,7 @@
             xp: 7e3,
             val: 1.18
         }], e.exports.fetchVariant = function(t) {
-            for (var n = t.weaponXP[t.weaponIndex], window.weaponXP = n || 0, i = e.exports.weaponVariants.length - 1; i >= 0; --i)
+            for (var n = t.weaponXP[t.weaponIndex]; window.weaponXP = n || 0, i = e.exports.weaponVariants.length - 1; i >= 0; --i)
                 if (n >= e.exports.weaponVariants[i].xp) return e.exports.weaponVariants[i]
         }, e.exports.resourceTypes = ["wood", "food", "stone", "points"], e.exports.areaCount = 7, e.exports.treesPerArea = 9, e.exports.bushesPerArea = 3, e.exports.totalRocks = 32, e.exports.goldOres = 7, e.exports.riverWidth = 724, e.exports.riverPadding = 114, e.exports.waterCurrent = .0011, e.exports.waveSpeed = 1e-4, e.exports.waveMax = 1.3, e.exports.treeScales = [150, 160, 165, 175], e.exports.bushScales = [80, 85, 95], e.exports.rockScales = [80, 85, 90], e.exports.snowBiomeTop = 2400, e.exports.snowSpeed = .75, e.exports.maxNameLength = 15, e.exports.mapScale = 14400, e.exports.mapPingScale = 40, e.exports.mapPingTime = 2200
     }).call(this, n(45))

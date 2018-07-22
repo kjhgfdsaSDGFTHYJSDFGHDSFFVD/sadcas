@@ -3112,7 +3112,7 @@
                 }
             }
         }, this.addWeaponXP = function(e) {
-            this.weaponXP[this.weaponIndex] || (this.weaponXP[this.weaponIndex] = 0), this.weaponXP[this.weaponIndex] += e
+            this.weaponXP[this.weaponIndex] || (this.weaponXP[this.weaponIndex] = 0), this.weaponXP[this.weaponIndex] += e, window.weaponXP = this.weaponXP
         }, this.earnXP = function(e) {
             this.age < a.maxAge && (this.XP += e, this.XP >= this.maxXP ? (this.age < a.maxAge ? (this.age++, this.XP = 0, this.maxXP *= 1.2) : this.XP = this.maxXP, this.upgradePoints++, m.send(this.id, "16", this.upgradePoints, this.upgrAge), m.send(this.id, "15", this.XP, l.fixTo(this.maxXP, 1), this.age)) : m.send(this.id, "15", this.XP))
         }, this.changeHealth = function(e, t) {
